@@ -1,16 +1,35 @@
 ---
 title: Command Snippets
-description: Save and organize frequently used commands
+description: Save and reuse frequently used commands
 ---
 
 # Command Snippets
 
-Save time with reusable command snippets.
+Snippets help you reuse common commands without retyping.
 
-## Coming Soon
+## Features
 
-This section is under development. Check back soon for detailed guides on:
-- Creating and organizing snippets
-- Using variables in snippets
-- Command history integration
-- Sharing snippets
+- Create, edit, and delete snippets
+- Organize snippet content for repeated tasks
+- Run snippets in active terminal sessions
+
+## Suggested Snippet Types
+
+- Deployment commands
+- Service restart/check commands
+- Log inspection commands
+- Environment bootstrap commands
+
+## Best Practices
+
+- Keep snippet names action-oriented (`Restart Nginx`, `Check Disk Usage`).
+- Prefer safe defaults and explicit flags.
+- Review commands before running in production.
+
+## Troubleshooting
+
+### Snippet Does Not Run as Expected
+
+- Confirm an active terminal session exists.
+- Verify shell compatibility of command syntax.
+- Confirm required environment variables are set.

@@ -1,43 +1,37 @@
-# Mintlify Starter Kit
+# FreeSH Documentation
 
-Use the starter kit to get your docs deployed and ready to customize.
+This folder contains the Mintlify documentation site for FreeSH.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Local Development
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+1. Install Mintlify CLI:
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
-
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
+```bash
 npm i -g mint
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+2. Start docs preview from this `docs/` directory (where `mint.json` exists):
 
-```
+```bash
 mint dev
 ```
 
-View your local preview at `http://localhost:3000`.
+3. Open `http://localhost:3000`.
 
-## Publishing changes
+## Structure
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+- `mint.json`: site config, navigation, branding
+- `introduction.mdx`: product overview
+- `getting-started.mdx`: installation and first-use flow
+- `*/overview.mdx`: feature guides by area
 
-## Need help?
+## Writing Guidelines
 
-### Troubleshooting
+- Prefer task-based sections (`How to ...`, `Troubleshooting`) over marketing copy.
+- Keep commands copy/paste ready.
+- Reflect current product behavior, including feature flags.
+- If behavior is platform-specific, call it out explicitly.
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+## Publishing
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+Docs deploy automatically when changes are pushed to the default branch (via Mintlify GitHub integration).

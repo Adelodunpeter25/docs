@@ -1,16 +1,67 @@
 ---
 title: Connection Management
-description: Organize and manage your SSH connections
+description: Create, organize, and manage SSH connections in FreeSH
 ---
 
 # Connection Management
 
-Learn how to create, organize, and manage your SSH connections in FreeSH.
+Use the Connections view to manage saved SSH hosts and open sessions quickly.
 
-## Coming Soon
+## What You Can Do
 
-This section is under development. Check back soon for detailed guides on:
-- Creating and editing connections
-- Organizing connections into groups
-- Managing connection credentials
-- Quick connect features
+- Create saved SSH connections
+- Edit host, port, username, auth method, and grouping
+- Organize connections into groups
+- Connect directly from the list
+- Delete stale connections
+
+## Creating a Connection
+
+1. Open **Home** and go to **Connections**.
+2. Click **New Connection**.
+3. Fill in:
+- Name
+- Host
+- Port (default `22`)
+- Username
+- Authentication method
+4. Save and connect.
+
+## Authentication Options
+
+- **Password**: Password is stored securely in your system keychain.
+- **Public Key**: Use an existing key or paste/import a private key; passphrase is supported.
+
+## Organizing Connections
+
+Use groups to keep environments separated, for example:
+
+- Production
+- Staging
+- Personal
+
+This makes quick filtering and navigation easier as your host list grows.
+
+## Updating and Deleting
+
+- Edit connection details from the connection form.
+- Delete connections you no longer use.
+- Deleting a saved connection does not delete remote data on the server.
+
+## Troubleshooting
+
+### Connection Fails
+
+- Confirm host and port are reachable.
+- Verify SSH service is running on the remote host.
+- Check firewall/network rules.
+
+### Authentication Errors
+
+- Confirm username.
+- Confirm selected auth method matches server config.
+- If using a key, verify passphrase and key format.
+
+### Host Verification Prompt
+
+On first connect, verify and trust the host key only if the fingerprint is expected.

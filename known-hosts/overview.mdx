@@ -1,16 +1,34 @@
 ---
 title: Known Hosts Management
-description: Manage trusted server host keys
+description: Verify and manage trusted server host keys
 ---
 
 # Known Hosts Management
 
-Manage and verify server host keys for secure connections.
+Known hosts protect you against man-in-the-middle attacks by validating server identity.
 
-## Coming Soon
+## How It Works
 
-This section is under development. Check back soon for detailed guides on:
-- Understanding host key verification
-- Viewing known hosts
-- Removing outdated host keys
-- Security best practices
+- First connection prompts for host key trust
+- Accepted fingerprints are stored locally
+- Future mismatches are flagged for security review
+
+## Managing Known Hosts
+
+From the Known Hosts section, you can:
+
+- Review stored host fingerprints
+- Remove outdated or invalid host entries
+- Import hosts from your SSH environment
+
+## When to Remove an Entry
+
+Remove a host key only when:
+
+- Server was rebuilt/reprovisioned
+- Host key rotation was expected
+- You confirmed infrastructure change is legitimate
+
+## Security Note
+
+Do not blindly trust changed host keys. Validate fingerprints through a trusted channel.

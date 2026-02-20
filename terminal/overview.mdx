@@ -1,16 +1,60 @@
 ---
 title: Terminal Features
-description: Learn about FreeSH's terminal capabilities
+description: Work with local and remote terminal sessions in FreeSH
 ---
 
 # Terminal Features
 
-Explore the powerful terminal features in FreeSH.
+FreeSH uses tabbed terminal sessions for both remote SSH and local shell access.
 
-## Coming Soon
+## Sessions and Tabs
 
-This section is under development. Check back soon for detailed guides on:
-- Terminal search and navigation
-- Copy and paste operations
-- Multiple terminal sessions
-- Terminal customization
+- Open multiple terminal tabs
+- Rename and pin tabs
+- Duplicate local or remote terminal tabs
+- Switch tabs with keyboard shortcuts
+
+## Local Terminal
+
+FreeSH can open a local shell session in a terminal tab.
+
+History hook coverage currently includes:
+
+- `bash`
+- `zsh`
+- `fish`
+- `powershell` / `pwsh`
+
+`sh` is intentionally excluded.
+
+## Disconnect and Reconnect UX
+
+When a remote session disconnects unexpectedly:
+
+- A disconnect notification appears in the bottom-left
+- You can choose **Reconnect** or **Close Tab**
+
+User-initiated disconnects do not trigger the reconnect notification.
+
+## Terminal Sidebar Features
+
+- Command history list
+- Saved snippets
+- Search/filter support for history
+
+## Logging
+
+Terminal sessions can be logged and reviewed later from Session Logs.
+
+## Troubleshooting
+
+### Session Closed Unexpectedly
+
+- Check remote host availability and network stability.
+- Use reconnect action from disconnect notification.
+- If reconnect fails repeatedly, verify credentials and server auth settings.
+
+### Backspace or Terminal Input Behaves Wrong
+
+- Ensure your shell and terminal environment are correctly initialized.
+- Confirm `TERM` is set (for local shells this is auto-set by FreeSH when missing).

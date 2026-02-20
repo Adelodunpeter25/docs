@@ -1,17 +1,55 @@
 ---
 title: SFTP File Transfers
-description: Transfer files between local and remote servers
+description: Browse and transfer files between local and remote systems
 ---
 
 # SFTP File Transfers
 
-Master file transfers with FreeSH's powerful SFTP browser.
+FreeSH includes a dual-pane SFTP interface for local and remote file operations.
 
-## Coming Soon
+## Core Capabilities
 
-This section is under development. Check back soon for detailed guides on:
-- Dual-panel file browsing
-- Drag and drop transfers
-- Remote-to-remote transfers
-- Bulk file operations
-- File preview and editing
+- Browse local and remote directories
+- Upload and download files/folders
+- Bulk operations for multiple items
+- Remote-to-remote transfer support
+- File preview for text-based files
+
+## Opening SFTP
+
+From an active remote session tab:
+
+1. Open tab context menu
+2. Select **Open in SFTP**
+
+You can also open SFTP from the main navigation.
+
+## Navigation
+
+- Double-click folders to enter
+- Use path input to jump paths
+- Use remote path autocomplete where available
+
+## File Operations
+
+- Create folder
+- Rename
+- Delete
+- Change permissions
+- Transfer with progress feedback
+
+## File Preview
+
+Text-based files can be previewed and edited directly in-app.
+
+## Troubleshooting
+
+### Cannot Browse Remote Path
+
+- Confirm the SSH session is active.
+- Verify account permissions for the target directory.
+
+### Transfer Fails
+
+- Check remote disk space and permissions.
+- Retry after reconnecting if session was interrupted.
