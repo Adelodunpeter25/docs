@@ -1,0 +1,56 @@
+---
+title: Disconnect and Reconnect
+description: How FreeSH handles broken SSH sessions and reconnection
+---
+
+# Disconnect and Reconnect
+
+When a remote session drops unexpectedly, FreeSH keeps the tab and shows a disconnect notification in the bottom-left.
+
+## What You See
+
+For unexpected disconnects:
+
+- Session status becomes disconnected
+- Notification shows the tab title
+- Available actions:
+- `Reconnect`
+- `Close Tab`
+
+For user-initiated disconnects:
+
+- No reconnect notification is shown
+
+## Reconnect Flow
+
+1. Click `Reconnect` on the disconnect notification.
+2. FreeSH reuses the saved connection configuration.
+3. A new session is created and the existing tab is rebound to the new session.
+
+If reconnect succeeds:
+
+- Notification is removed
+- Tab remains open with the reconnected terminal
+
+If reconnect fails:
+
+- Error toast is shown
+- Notification remains, so you can retry or close tab
+
+## Notes
+
+- Workspace-contained sessions should also surface disconnect notifications.
+- Tabs are not auto-closed on unexpected disconnect.
+
+## Troubleshooting
+
+### No Disconnect Notification Appears
+
+- Confirm the disconnect was not user-initiated.
+- Confirm session lifecycle listener is active (not removed by another service handler).
+- Confirm tab/session mapping exists (including workspace session ids).
+
+### Reconnect Button Does Nothing
+
+- Verify connection details still exist in local storage.
+- Check authentication method is still valid for the host.

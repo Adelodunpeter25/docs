@@ -1,0 +1,51 @@
+---
+title: Terminal History Capture
+description: How command history is captured across supported shells
+---
+
+# Terminal History Capture
+
+FreeSH captures command history from shell execution hooks, not raw keystrokes.
+
+## Supported Shells
+
+- `bash`
+- `zsh`
+- `fish`
+- `powershell` / `pwsh`
+
+`sh` is intentionally excluded.
+
+## Why Hook-Based Capture
+
+Hook-based capture records the final executed command after shell editing.
+
+This correctly handles:
+
+- tab completion
+- backspace edits
+- line edits before Enter
+
+## Reliability Model
+
+- Hook installation is idempotent to prevent duplicate registrations.
+- Bootstrap fragments are filtered from terminal/log output.
+- History markers are parsed from OSC payloads and stored in history.
+
+## Expected Behavior
+
+- Commands appear in history after execution (Enter).
+- Commands are deduplicated by history store rules.
+- Bootstrap hook text should never appear as visible terminal content.
+
+## Troubleshooting
+
+### Hook Script Text Appears in Terminal
+
+- Usually indicates shell bootstrap timing/injection issue.
+- Verify local shell startup hook path is used (startup config), not typed-input injection.
+
+### Local History Missing Commands
+
+- Confirm local shell is one of the supported shells.
+- Confirm command was executed (not just typed).

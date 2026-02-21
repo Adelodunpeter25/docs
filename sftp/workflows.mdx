@@ -1,0 +1,53 @@
+---
+title: SFTP Workflows
+description: Common transfer and navigation workflows in the SFTP UI
+---
+
+# SFTP Workflows
+
+This page covers the most common day-to-day SFTP usage patterns.
+
+## Upload Local to Remote
+
+1. Connect to a host.
+2. Open SFTP for the session.
+3. Navigate to local source path in left pane.
+4. Navigate to remote target path in right pane.
+5. Drag files/folders from local to remote.
+
+## Download Remote to Local
+
+1. Open remote path in right pane.
+2. Open local destination in left pane.
+3. Drag from remote to local.
+
+## Remote to Remote Transfer
+
+1. Ensure both remote sessions are active.
+2. Start transfer from source remote path.
+3. Select destination host/path.
+4. Monitor progress and failures.
+
+## Bulk Operations
+
+- Multi-select files/folders
+- Run delete/download/upload in bulk
+- Track operation progress and cancel when needed
+
+## Path Navigation and Autocomplete
+
+- Double-click folders to enter
+- Use path input for direct navigation
+- Remote path autocomplete applies to connected remote sessions
+
+## Troubleshooting
+
+### Folder Double-Click Does Not Open
+
+- Verify current session is active.
+- Verify SFTP list listener is not stale/colliding.
+
+### Remote Path Autocomplete Not Working
+
+- Confirm session is remote (not local-only context).
+- Confirm current connection is alive and SFTP client is available.

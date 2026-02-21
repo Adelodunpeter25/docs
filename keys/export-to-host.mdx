@@ -1,0 +1,42 @@
+---
+title: Export Public Key to Host
+description: Add a saved key's public key to a remote host authorized_keys file
+---
+
+# Export Public Key to Host
+
+Use key export to append a public key to a remote host so that key-based login works.
+
+## Steps
+
+1. Open **Keys**.
+2. Select the key to export.
+3. Click export action.
+4. Choose target connection.
+5. Confirm export.
+
+## Expected Result
+
+- Success toast: key exported to host.
+- On failure: UI should show detailed backend error message.
+
+## Common Errors
+
+### `no valid authentication method configured for this connection`
+
+The target connection does not have usable authentication settings for export.
+
+Check:
+
+- Username/host/port are valid
+- Auth method is configured correctly
+- Required credentials or key references exist
+
+### Permission Denied Writing `authorized_keys`
+
+- Remote user may not have write permissions to `~/.ssh`
+- Remote home directory may be restricted
+
+## Validation
+
+After export, test SSH login with the matching private key.

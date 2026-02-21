@@ -42,19 +42,23 @@
     {
       "group": "Terminal",
       "pages": [
-        "terminal/overview"
+        "terminal/overview",
+        "terminal/disconnect-reconnect",
+        "terminal/history-capture"
       ]
     },
     {
       "group": "SFTP",
       "pages": [
-        "sftp/overview"
+        "sftp/overview",
+        "sftp/workflows"
       ]
     },
     {
       "group": "SSH Keys",
       "pages": [
-        "keys/overview"
+        "keys/overview",
+        "keys/export-to-host"
       ]
     },
     {
