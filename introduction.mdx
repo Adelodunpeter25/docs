@@ -1,122 +1,60 @@
 ---
 title: Introduction
-description: A free, open-source, local-first SSH client.
+description: A fast, local-first SSH client for people who live in terminals.
 ---
 
-# Welcome to FreeSH
+# FreeSH
 
-FreeSH is a free, open-source, local-first SSH client built for developers and system administrators who need a reliable, feature-rich tool for managing remote servers and transferring files.
+FreeSH exists for one reason: remote work should stay fast even when you have many sessions open for hours.
 
-## What is FreeSH?
+I built it after hitting the same wall repeatedly with heavier tools: rising CPU, loud fan noise, and workflows that got locked behind cloud sync.
 
-FreeSH combines the functionality of a terminal emulator, SSH client, and SFTP file manager into a single, intuitive application. Whether you're managing multiple servers, transferring files between remote locations, or executing commands across your infrastructure, FreeSH provides the tools you need.
+FreeSH is local-first, desktop-native, and focused on long-running terminal workflows.
 
-## Key Features
+## What FreeSH Is
 
-### Terminal Management
-- **Multiple Sessions**: Open and manage multiple SSH connections simultaneously with tabbed interface
-- **Local Terminal**: Built-in local terminal for quick command execution
-- **Terminal Search**: Search through terminal output to find specific commands or results
-- **Session Persistence**: Your connections and settings are saved between sessions
+FreeSH combines:
 
-### Secure Authentication
-- **Multiple Auth Methods**: Support for password and SSH key authentication
-- **SSH Key Management**: Browse and select SSH keys with built-in file picker
-- **System Keychain Integration**: Securely store credentials using your system's keychain
-- **Known Hosts Management**: Review and confirm host keys before adding to trusted hosts
+- SSH terminal sessions
+- SFTP file operations
+- Port forwarding
+- Connection and key management
 
-### Advanced SFTP
-- **Dual-Panel Interface**: Side-by-side file browsing for easy transfers
-- **Remote-to-Remote Transfers**: Transfer files directly between servers without downloading locally
-- **Drag and Drop**: Intuitive drag-and-drop support for all transfer types
-- **Bulk Operations**: Select and transfer multiple files and directories at once
-- **Progress Tracking**: Real-time progress monitoring with cancellation support
-- **File Preview**: View and edit remote files directly in the application
+Everything runs locally. Your connections, history, and settings stay on your machine.
 
-### Port Forwarding
-- **Local Forwarding**: Forward local ports to remote destinations
-- **Remote Forwarding**: Forward remote ports to local destinations
-- **Dynamic Forwarding**: SOCKS proxy support for secure browsing
-- **Auto-Start**: Configure tunnels to start automatically on connection
-- **Tunnel Management**: Easy-to-use interface for managing all your port forwards
+## Product Principles
 
-### Productivity Features
-- **Command Snippets**: Save and organize frequently used commands
-- **Command History**: Track and reuse commands across sessions
-- **Variables & Placeholders**: Create dynamic snippets with runtime input
-- **Connection Groups**: Organize connections into folders and groups
-- **Session Logging**: Save terminal sessions to file for later review
-- **Tab Management**: Pin important sessions and rename tabs for easy identification
-- **Keyboard Shortcuts**: Speed up your workflow with comprehensive keyboard shortcuts
+- **Performance first**: startup and tab switching must stay responsive
+- **Local ownership**: no mandatory cloud account for core usage
+- **Secure defaults**: host-key verification and system keychain integration
+- **Practical workflow**: built for people managing multiple hosts daily
 
-### Security & Privacy
-- **Local-First Architecture**: All data stored locally on your machine, no cloud sync
-- **Encrypted Credentials**: Passwords and keys secured with system keychain
-- **No Telemetry**: Zero tracking or data collection
-- **Offline Capable**: Full functionality without internet (except remote connections)
+## Core Areas
 
-## Who is FreeSH For?
-
-FreeSH is designed for:
-
-- **DevOps Engineers** managing multiple servers and deployments
-- **System Administrators** performing routine maintenance and file transfers
-- **Developers** working with remote development environments
-- **Security Professionals** requiring secure, auditable remote access
-- **Anyone** who needs a reliable SSH and SFTP client
+<CardGroup cols={2}>
+  <Card title="Connections" icon="server" href="/connections/overview">
+    Save hosts, organize groups, and connect quickly.
+  </Card>
+  <Card title="Terminal" icon="terminal" href="/terminal/overview">
+    Work across local and remote sessions with tab tools and reconnect support.
+  </Card>
+  <Card title="SFTP" icon="folder-tree" href="/sftp/overview">
+    Browse and transfer files between local and remote systems.
+  </Card>
+  <Card title="SSH Keys" icon="key" href="/keys/overview">
+    Import, generate, and use keys across saved connections.
+  </Card>
+</CardGroup>
 
 ## Platform Support
 
-FreeSH is built with Electron and Go, providing native performance across:
 - macOS (Intel and Apple Silicon)
 - Windows
 - Linux
 
-## Getting Started
+## Next
 
-Ready to get started? Check out the [Getting Started](/getting-started) guide to install FreeSH and make your first connection.
-
-## Explore Features
-
-<CardGroup cols={2}>
-  <Card
-    title="Connection Management"
-    icon="server"
-    href="/connections/overview"
-  >
-    Create and organize your SSH connections
-  </Card>
-  <Card
-    title="SFTP File Transfers"
-    icon="folder-tree"
-    href="/sftp/overview"
-  >
-    Transfer files with drag-and-drop support
-  </Card>
-  <Card
-    title="SSH Key Management"
-    icon="key"
-    href="/keys/overview"
-  >
-    Generate and manage your SSH keys
-  </Card>
-  <Card
-    title="Port Forwarding"
-    icon="arrow-right-arrow-left"
-    href="/port-forwarding/overview"
-  >
-    Set up secure SSH tunnels
-  </Card>
-</CardGroup>
-
-## Open Source
-
-FreeSH is open source software. Contributions, bug reports, and feature requests are welcome on our [GitHub repository](https://github.com/Adelodunpeter25/freessh).
-
----
-
-**Next Steps:**
-- [Installation & Setup](/getting-started)
-- [Managing Connections](/connections/overview)
-- [Using the Terminal](/terminal/overview)
-- [SFTP File Transfers](/sftp/overview)
+- [Getting Started](/getting-started)
+- [Connections Overview](/connections/overview)
+- [Terminal Overview](/terminal/overview)
+- [SFTP Overview](/sftp/overview)
