@@ -1,0 +1,77 @@
+---
+title: First Connection
+description: Create your first connection and verify everything is working.
+---
+
+## 1. Create a Connection
+
+1. Open **Home** > **Connections**
+2. Click **New Connection**
+3. Fill in:
+- Name
+- Host
+- Port (`22` default)
+- Username
+- Authentication method
+
+## 2. Choose Authentication
+
+### Password
+
+1. Select **Password**
+2. Enter password
+3. Password is stored in your system keychain
+
+### Public Key
+
+1. Select **Public Key**
+2. Use an existing key, or paste/import a private key
+3. If encrypted, provide passphrase (stored in keychain)
+
+## 3. Save and Connect
+
+1. Click **Save & Connect**
+2. Review host key fingerprint on first connection
+3. Click **Accept** only if fingerprint matches what you expect
+
+## What You Should See
+
+- A new terminal tab for the connected host
+- Session actions in tab context menu (including SFTP)
+- Connection saved on Home for next use
+
+## Where to Go Next
+
+<CardGroup cols={2}>
+  <Card title="Manage Connections" icon="server" href="/connections/overview">
+    Organize hosts, groups, and authentication details.
+  </Card>
+  <Card title="Use Terminal Features" icon="terminal" href="/terminal/overview">
+    Work with tabs, reconnect flow, history, and logging.
+  </Card>
+  <Card title="Transfer Files" icon="folder-tree" href="/sftp/overview">
+    Use SFTP workflows for upload, download, and remote operations.
+  </Card>
+  <Card title="Manage SSH Keys" icon="key" href="/keys/overview">
+    Import, generate, and export keys to hosts.
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+### Connection failed
+
+- Confirm host/port are reachable
+- Confirm SSH service is running
+- Confirm auth method matches server config
+
+### Permission denied
+
+- Re-check username
+- Validate password/key/passphrase
+- For key files, ensure restrictive permissions (`chmod 600 ~/.ssh/id_rsa`)
+
+### Host key changed
+
+- Treat as a security event unless you expected server rebuild/rotation
+- Remove stale entry from Known Hosts only after verification
