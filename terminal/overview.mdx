@@ -1,48 +1,54 @@
 ---
 title: Terminal Features
-description: Work with local and remote terminal sessions in FreeSH
+description: Work across local and remote terminal sessions without losing flow.
 ---
 
-FreeSH uses tabbed terminal sessions for both remote SSH and local shell access.
+FreeSH terminal workflows are designed for long-running, multi-tab server work.
 
-## Sessions and Tabs
+## Session Model
 
-- Open multiple terminal tabs
-- Rename and pin tabs
-- Duplicate local or remote terminal tabs
-- Switch tabs with keyboard shortcuts
+- Open multiple remote SSH sessions
+- Open local terminal tabs
+- Rename tabs to match active task
+- Reconnect dropped remote sessions from in-app notification
 
 ## Local Terminal
 
-FreeSH can open a local shell session in a terminal tab.
+Use local tabs for quick checks (`git`, `docker`, scripts) without leaving FreeSH.
 
-History hook coverage currently includes:
-
+Supported history capture shells:
 - `bash`
 - `zsh`
 - `fish`
 - `powershell` / `pwsh`
 
-`sh` is intentionally excluded.
+## Remote Session Behavior
 
-## Disconnect and Reconnect UX
+When a remote session drops unexpectedly:
+- tab remains open
+- disconnect notification appears
+- actions: **Reconnect** or **Close Tab**
 
-When a remote session disconnects unexpectedly:
+When disconnect is user-initiated:
+- reconnect notification is not shown
 
-- A disconnect notification appears in the bottom-left
-- You can choose **Reconnect** or **Close Tab**
+## Sidebar Productivity Tools
 
-User-initiated disconnects do not trigger the reconnect notification.
+From terminal context, you can work with:
+- command history
+- snippets
+- search/filter
 
-## Terminal Sidebar Features
-
-- Command history list
-- Saved snippets
-- Search/filter support for history
+This is useful for repetitive operational commands across environments.
 
 ## Logging
 
-Terminal sessions can be logged and reviewed later from Session Logs.
+You can capture terminal output to session logs and review later.
+
+Use this for:
+- incident timelines
+- change validation
+- handoff notes
 
 ## Related Guides
 
@@ -51,13 +57,14 @@ Terminal sessions can be logged and reviewed later from Session Logs.
 
 ## Troubleshooting
 
-### Session Closed Unexpectedly
+### Session closes unexpectedly
 
-- Check remote host availability and network stability.
-- Use reconnect action from disconnect notification.
-- If reconnect fails repeatedly, verify credentials and server auth settings.
+- Verify host/network stability
+- Use reconnect action first
+- If repeated, validate credentials and server SSH config
 
-### Backspace or Terminal Input Behaves Wrong
+### Input/editing feels incorrect
 
-- Ensure your shell and terminal environment are correctly initialized.
-- Confirm `TERM` is set (for local shells this is auto-set by FreeSH when missing).
+- Confirm shell startup config is healthy
+- Confirm `TERM` is set correctly
+- For local shells, restart local tab after shell config changes

@@ -1,32 +1,33 @@
 ---
 title: SFTP File Transfers
-description: Browse and transfer files between local and remote systems
+description: Browse, transfer, and edit files between local and remote systems.
 ---
 
-FreeSH includes a dual-pane SFTP interface for local and remote file operations.
+FreeSH includes SFTP for day-to-day file operations without leaving your terminal workflow.
 
 ## Core Capabilities
 
 - Browse local and remote directories
-- Upload and download files/folders
-- Bulk operations for multiple items
-- Remote-to-remote transfer support
-- File preview for text-based files
+- Upload/download files and folders
+- Bulk operations
+- Remote-to-remote transfers
+- In-app preview/edit for text files
 
-## Opening SFTP
+## Open SFTP
 
-From an active remote session tab:
+From an active remote session:
 
-1. Open tab context menu
-2. Select **Open in SFTP**
+1. Open the tab context menu
+2. Click **Open in SFTP**
 
-You can also open SFTP from the main navigation.
+You can also open SFTP from app navigation and select a connection.
 
-## Navigation
+## Typical Workflow
 
-- Double-click folders to enter
-- Use path input to jump paths
-- Use remote path autocomplete where available
+1. Keep source path open in one pane
+2. Keep destination path open in the other pane
+3. Drag and drop files/folders
+4. Monitor progress and errors
 
 ## File Operations
 
@@ -34,11 +35,16 @@ You can also open SFTP from the main navigation.
 - Rename
 - Delete
 - Change permissions
-- Transfer with progress feedback
+- Transfer with progress and cancellation
 
-## File Preview
+## File Preview and Edit
 
-Text-based files can be previewed and edited directly in-app.
+Text files can be previewed and edited directly in FreeSH.
+
+Use this for quick edits like:
+- config updates
+- script tweaks
+- log inspection
 
 ## Related Guides
 
@@ -46,12 +52,20 @@ Text-based files can be previewed and edited directly in-app.
 
 ## Troubleshooting
 
-### Cannot Browse Remote Path
+### Cannot browse remote path
 
-- Confirm the SSH session is active.
-- Verify account permissions for the target directory.
+- Confirm SSH session is active
+- Confirm target directory permissions
+- Reconnect session if SFTP channel is stale
 
-### Transfer Fails
+### Transfer fails
 
-- Check remote disk space and permissions.
-- Retry after reconnecting if session was interrupted.
+- Check destination permissions
+- Check disk space on source and destination
+- Retry after reconnect if session was interrupted
+
+### Preview fails for a remote file
+
+- Confirm the tab is tied to an active remote session
+- Confirm file is readable by connected user
+- Retry after reconnect if session was recently restored
