@@ -56,22 +56,3 @@ description: Create your first connection and verify everything is working.
     Import, generate, and export keys to hosts.
   </Card>
 </CardGroup>
-
-## Troubleshooting
-
-### Connection failed
-
-- Confirm host/port are reachable
-- Confirm SSH service is running
-- Confirm auth method matches server config
-
-### Permission denied
-
-- Re-check username
-- Validate password/key/passphrase
-- For key files, ensure restrictive permissions (`chmod 600 ~/.ssh/id_rsa`)
-
-### Host key changed
-
-- Treat as a security event unless you expected server rebuild/rotation
-- Remove stale entry from Known Hosts only after verification
