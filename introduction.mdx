@@ -7,20 +7,54 @@ FreeSH combines the functionality of a terminal emulator, SSH client, and SFTP f
 
 ## Core Areas
 
-<CardGroup cols={2}>
-  <Card title="Connections" icon="server" href="/connections/overview">
-    Save hosts, organize groups, and connect quickly.
-  </Card>
-  <Card title="Terminal" icon="terminal" href="/terminal/overview">
-    Work across local and remote sessions with tab tools and reconnect support.
-  </Card>
-  <Card title="SFTP" icon="folder-tree" href="/sftp/overview">
-    Browse and transfer files between local and remote systems.
-  </Card>
-  <Card title="SSH Keys" icon="key" href="/keys/overview">
-    Import, generate, and use keys across saved connections.
-  </Card>
-</CardGroup>
+- **Connections**: Save hosts, organize groups, and connect quickly.
+- **Terminal**: Work across local and remote sessions with tab tools and reconnect support.
+- **SFTP**: Browse and transfer files between local and remote systems.
+- **SSH Keys**: Import, generate, and use keys across saved connections.
+
+## Key Features
+
+### Terminal Management
+- **Multiple Sessions**: Open and manage multiple SSH connections simultaneously with tabbed interface
+- **Local Terminal**: Built-in local terminal for quick command execution
+- **Terminal Search**: Search through terminal output to find specific commands or results
+- **Session Persistence**: Your connections and settings are saved between sessions
+
+### Secure Authentication
+- **Multiple Auth Methods**: Support for password and SSH key authentication
+- **SSH Key Management**: Browse and select SSH keys with built-in file picker
+- **System Keychain Integration**: Securely store credentials using your system's keychain
+- **Known Hosts Management**: Review and confirm host keys before adding to trusted hosts
+
+### Advanced SFTP
+- **Dual-Panel Interface**: Side-by-side file browsing for easy transfers
+- **Remote-to-Remote Transfers**: Transfer files directly between servers without downloading locally
+- **Drag and Drop**: Intuitive drag-and-drop support for all transfer types
+- **Bulk Operations**: Select and transfer multiple files and directories at once
+- **Progress Tracking**: Real-time progress monitoring with cancellation support
+- **File Preview**: View and edit remote files directly in the application
+
+### Port Forwarding
+- **Local Forwarding**: Forward local ports to remote destinations
+- **Remote Forwarding**: Forward remote ports to local destinations
+- **Dynamic Forwarding**: SOCKS proxy support for secure browsing
+- **Auto-Start**: Configure tunnels to start automatically on connection
+- **Tunnel Management**: Easy-to-use interface for managing all your port forwards
+
+### Productivity Features
+- **Command Snippets**: Save and organize frequently used commands
+- **Command History**: Track and reuse commands across sessions
+- **Variables & Placeholders**: Create dynamic snippets with runtime input
+- **Connection Groups**: Organize connections into folders and groups
+- **Session Logging**: Save terminal sessions to file for later review
+- **Tab Management**: Pin important sessions and rename tabs for easy identification
+- **Keyboard Shortcuts**: Speed up your workflow with comprehensive keyboard shortcuts
+
+### Security & Privacy
+- **Local-First Architecture**: All data stored locally on your machine, no cloud sync
+- **Encrypted Credentials**: Passwords and keys secured with system keychain
+- **No Telemetry**: Zero tracking or data collection
+- **Offline Capable**: Full functionality without internet (except remote connections)
 
 ## Open Source
 
