@@ -5,25 +5,64 @@ description: Create SSH tunnels for local, remote, and dynamic forwarding.
 
 Use port forwarding to route traffic securely through SSH.
 
-## Supported Modes
+## Before You Start
 
-- **Local forwarding**: local port -> remote host:port
-- **Remote forwarding**: remote port -> local host:port
-- **Dynamic forwarding**: SOCKS proxy via SSH
+- Create or select an SSH connection first
+- Pick the correct forwarding mode for your use case
+- Choose ports that are not already in use
 
-## Common Use Cases
+## Local Forwarding (Most Common)
 
-- Access internal services from your machine
-- Expose local development service to remote network
-- Route browser/tool traffic through SOCKS
+Use this when you want your local machine to access a service reachable from the remote server.
 
-## Manage Tunnels
+Flow:
+- Local port -> Remote host:remote port (through SSH)
 
-You can:
-- create tunnel configurations
-- start and stop active tunnels
-- monitor status from the app
-- auto-start selected tunnels after connection
+What to enter:
+- `Name`: Friendly label (example: `Prod DB`)
+- `Connection`: SSH host this tunnel should use
+- `Binding Address`: `localhost` (safe default) or `0.0.0.0`
+- `Local Port`: port on your machine (example: `5433`)
+- `Remote Host`: target host seen from the server (example: `127.0.0.1` or internal host)
+- `Remote Port`: service port on that host (example: `5432`)
+- `Auto-start with connection`: starts tunnel automatically after SSH connect
+
+Example:
+- To access a remote Postgres on `127.0.0.1:5432`, create:
+  - Local Port: `5433`
+  - Remote Host: `127.0.0.1`
+  - Remote Port: `5432`
+Then connect to `localhost:5433` from your local app.
+
+## Remote Forwarding
+
+Use this when you want the remote server/network to reach a service running on your local machine.
+
+Flow:
+- Remote port -> Local host:local port (through SSH)
+
+What to enter:
+- `Name`
+- `Connection`
+- `Remote Port`: exposed on remote side
+- `Local Host`: usually `127.0.0.1` on your machine
+- `Local Port`: local service port
+- `Auto-start with connection`
+
+## Dynamic Forwarding (SOCKS5)
+
+Use this to create a local SOCKS proxy for browser/tools traffic.
+
+What to enter:
+- `Name`
+- `Connection`
+- `Binding Address`: `localhost` (recommended)
+- `Local Port (SOCKS Proxy)`: example `1080`
+- `Auto-start with connection`
+
+Then configure your app/browser SOCKS proxy to:
+- Host: `localhost`
+- Port: your chosen local port
 
 ## Troubleshooting
 
