@@ -26,6 +26,24 @@ Snippets reduce repetitive typing and help standardize frequent operations.
 - Use placeholders for values that change between environments
 - Keep production-impacting commands clearly labeled
 
+## Dynamic Values (Runtime Injection)
+
+Use placeholders directly in the command, for example:
+
+```bash
+ssh {USER}@{HOST} -p {PORT}
+```
+
+How it works:
+- Placeholders use `{NAME}` format
+- Supported names are uppercase letters and underscores (`{HOST}`, `{DB_USER}`)
+- Values are requested in a dialog when you click **Run**
+- All values are required before command execution
+
+Notes:
+- Replacement happens at run time, not when saving the snippet
+- **Paste** is available only for snippets without placeholders
+
 ## Troubleshooting
 
 See [Snippets Troubleshooting](/troubleshooting/snippets-troubleshooting).
