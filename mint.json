@@ -68,6 +68,18 @@
       ]
     },
     {
+      "group": "Productivity",
+      "pages": [
+        "productivity/overview"
+      ]
+    },
+    {
+      "group": "Import / Export",
+      "pages": [
+        "import-export/overview"
+      ]
+    },
+    {
       "group": "Port Forwarding",
       "pages": [
         "port-forwarding/overview"
@@ -89,7 +101,6 @@
       "group": "Troubleshooting",
       "pages": [
         "troubleshooting/connection-troubleshooting",
-        "troubleshooting/getting-started-troubleshooting",
         "troubleshooting/terminal-troubleshooting",
         "troubleshooting/terminal-disconnect-reconnect-troubleshooting",
         "troubleshooting/sftp-overview-troubleshooting",
