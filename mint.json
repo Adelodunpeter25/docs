@@ -44,8 +44,7 @@
       "group": "Terminal",
       "pages": [
         "terminal/overview",
-        "terminal/disconnect-reconnect",
-        "terminal/history-capture"
+        "terminal/disconnect-reconnect"
       ]
     },
     {
@@ -92,7 +91,6 @@
         "troubleshooting/connection-troubleshooting",
         "troubleshooting/getting-started-troubleshooting",
         "troubleshooting/terminal-troubleshooting",
-        "troubleshooting/terminal-history-capture-troubleshooting",
         "troubleshooting/terminal-disconnect-reconnect-troubleshooting",
         "troubleshooting/sftp-overview-troubleshooting",
         "troubleshooting/sftp-workflows-troubleshooting",
