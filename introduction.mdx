@@ -3,27 +3,7 @@ title: What is FreeSH
 description: A free, open-source, local-first SSH client.
 ---
 
-FreeSH exists for one reason: remote work should stay fast even when you have many sessions open for hours.
-
-I built it after hitting the same wall repeatedly with heavier tools: rising CPU, loud fan noise, and workflows that got locked behind cloud sync.
-
-FreeSH is local-first, desktop-native, and focused on long-running terminal workflows.
-
-FreeSH combines:
-
-- SSH terminal sessions
-- SFTP file operations
-- Port forwarding
-- Connection and key management
-
-Everything runs locally. Your connections, history, and settings stay on your machine.
-
-## Product Principles
-
-- **Performance first**: startup and tab switching must stay responsive
-- **Local ownership**: no mandatory cloud account for core usage
-- **Secure defaults**: host-key verification and system keychain integration
-- **Practical workflow**: built for people managing multiple hosts daily
+FreeSH combines the functionality of a terminal emulator, SSH client, and SFTP file manager into a single application. Whether you're managing multiple servers, transferring files between remote locations, or executing commands across your infrastructure, FreeSH provides the tools you need.
 
 ## Core Areas
 
@@ -42,15 +22,23 @@ Everything runs locally. Your connections, history, and settings stay on your ma
   </Card>
 </CardGroup>
 
-## Platform Support
+## Open Source
 
-- macOS (Intel and Apple Silicon)
-- Windows
-- Linux
+FreeSH is open source software. Contributions, bug reports, and feature requests are welcome on our [GitHub repository](https://github.com/Adelodunpeter25/freessh).
 
 ## Next
 
-- [Getting Started](/getting-started)
-- [Connections Overview](/connections/overview)
-- [Terminal Overview](/terminal/overview)
-- [SFTP Overview](/sftp/overview)
+<CardGroup cols={2}>
+  <Card title="Getting Started" icon="rocket" href="/getting-started">
+    Install FreeSH and make your first connection.
+  </Card>
+  <Card title="Connections Overview" icon="server" href="/connections/overview">
+    Create, organize, and manage saved hosts.
+  </Card>
+  <Card title="Terminal Overview" icon="terminal" href="/terminal/overview">
+    Work with local and remote terminal sessions.
+  </Card>
+  <Card title="SFTP Overview" icon="folder-tree" href="/sftp/overview">
+    Browse and transfer files between systems.
+  </Card>
+</CardGroup>
