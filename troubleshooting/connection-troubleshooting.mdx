@@ -1,0 +1,23 @@
+---
+title: Connection Troubleshooting
+description: Common connection issues and what to check first.
+---
+
+If a connection is failing, start with the checks below. In most cases, the issue is one missing detail in host, auth, or network settings.
+
+## Connection failed
+
+- Confirm the host and port are reachable from your machine
+- Confirm SSH service is running on the remote server
+- Confirm your selected auth method matches the server configuration
+
+## Permission denied
+
+- Re-check the username
+- Validate your password, key, or passphrase
+- For key files, use restrictive permissions: `chmod 600 ~/.ssh/id_rsa`
+
+## Host key changed
+
+- Treat this as a security event unless you expected a rebuild or key rotation
+- Remove the stale key from Known Hosts only after you verify the change

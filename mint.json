@@ -27,7 +27,7 @@
   },
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Getting Started",
       "pages": [
         "introduction",
         "getting-started"
@@ -83,6 +83,12 @@
       "group": "Known Hosts",
       "pages": [
         "known-hosts/overview"
+      ]
+    },
+    {
+      "group": "Troubleshooting",
+      "pages": [
+        "troubleshooting/connection-troubleshooting"
       ]
     }
   ],
