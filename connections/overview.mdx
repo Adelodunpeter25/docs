@@ -1,15 +1,12 @@
 ---
 title: Connection Management
-description: Save, organize, and launch SSH connections quickly from Home.
 ---
 
-Use **Home > Connections** as your launchpad for day-to-day server work.
+Manage saved SSH connections from **Home > Connections**.
 
 ## Edit Existing Connections
 
-Start here when a saved host changes and you need to update connection details.
-
-Use edit when host details change (hostname, user, port, auth method, or key selection).
+Use edit when a saved host changes (hostname, user, port, auth method, or key selection).
 
 Good practice:
 - Keep connection names stable (`prod-api-1`, `staging-db`)
@@ -33,25 +30,3 @@ Deleting a saved connection:
 - Removes only local saved config
 - Does **not** delete anything on remote servers
 - Does not remove unrelated session logs/snippets automatically
-
-## Troubleshooting
-
-### Connection fails immediately
-
-- Confirm host and port are reachable from your machine
-- Confirm SSH daemon is running on target host
-- Confirm firewall/security group rules allow inbound SSH
-
-### Permission denied
-
-- Re-check username
-- Re-check selected auth method
-- If key-based auth, verify key/passphrase pair is correct
-
-### First-time host verification prompt appears
-
-This is expected for new hosts.
-
-- Compare fingerprint with a trusted source
-- Accept only after verification
-- The trusted key is then saved to Known Hosts
