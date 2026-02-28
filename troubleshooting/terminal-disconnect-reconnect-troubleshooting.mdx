@@ -1,0 +1,15 @@
+---
+title: Disconnect and Reconnect Troubleshooting
+description: Fix reconnect notifications and reconnect action issues.
+---
+
+## No disconnect notification appears
+
+- Confirm the disconnect was not user-initiated
+- Confirm session lifecycle listener is active (not removed by another service handler)
+- Confirm tab/session mapping exists (including workspace session ids)
+
+## Reconnect button does nothing
+
+- Verify connection details still exist in local storage
+- Check authentication method is still valid for the host

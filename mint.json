@@ -89,7 +89,18 @@
     {
       "group": "Troubleshooting",
       "pages": [
-        "troubleshooting/connection-troubleshooting"
+        "troubleshooting/connection-troubleshooting",
+        "troubleshooting/getting-started-troubleshooting",
+        "troubleshooting/terminal-troubleshooting",
+        "troubleshooting/terminal-history-capture-troubleshooting",
+        "troubleshooting/terminal-disconnect-reconnect-troubleshooting",
+        "troubleshooting/sftp-overview-troubleshooting",
+        "troubleshooting/sftp-workflows-troubleshooting",
+        "troubleshooting/snippets-troubleshooting",
+        "troubleshooting/session-logs-troubleshooting",
+        "troubleshooting/known-hosts-troubleshooting",
+        "troubleshooting/port-forwarding-troubleshooting",
+        "troubleshooting/keys-troubleshooting"
       ]
     }
   ],

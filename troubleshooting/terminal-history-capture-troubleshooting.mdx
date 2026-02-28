@@ -1,0 +1,14 @@
+---
+title: Terminal History Capture Troubleshooting
+description: Fix shell history capture issues.
+---
+
+## Hook script text appears in terminal
+
+- Usually indicates shell bootstrap timing/injection issue
+- Verify local shell startup hook path is used (startup config), not typed-input injection
+
+## Local history missing commands
+
+- Confirm local shell is one of the supported shells
+- Confirm command was executed (not just typed)
