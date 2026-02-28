@@ -1,40 +1,46 @@
 ---
 title: SSH Key Management
-description: Generate, import, and use SSH keys securely
+description: Generate, import, and use SSH keys for saved connections.
 ---
 
-Manage SSH keys used by your saved connections.
+Use the **Keys** section to manage credentials for key-based SSH authentication.
 
 ## What You Can Do
 
-- Generate new SSH keys
+- Generate new key pairs
 - Import existing private keys
 - Rename and delete saved keys
 - Export public keys to remote hosts
 
-## Generating Keys
+## Generate a Key
 
-Create keys from the Keys section and save them for reuse in connection profiles.
+1. Open **Keys**
+2. Create a new key pair
+3. Save with a clear name (example: `personal-ed25519`, `prod-deploy`)
 
-## Importing Keys
+Use distinct keys by environment where possible.
 
-You can import private keys by pasting key content or selecting a key file.
+## Import an Existing Key
+
+You can import by:
+- pasting private key content
+- selecting a key file from disk
 
 If the key is encrypted, provide its passphrase.
 
-## Using Keys in Connections
+## Use a Key in Connections
 
-In a connection profile:
+In a connection form:
 
-1. Set auth method to **Public Key**
+1. Set authentication to **Public Key**
 2. Select a saved key
-3. Save and connect
+3. Click **Save & Connect** (or **Save Changes** when editing)
 
-## Exporting Public Key to Host
+## Export Public Key to Host
 
-FreeSH can append your public key to the remote host `authorized_keys`.
+FreeSH can append your public key to remote `authorized_keys`.
 
-If export fails, the error shown in UI should include backend detail (for example auth method/config issues).
+If export fails, review the backend error details shown in UI.
 
 ## Related Guides
 
@@ -42,8 +48,14 @@ If export fails, the error shown in UI should include backend detail (for exampl
 
 ## Troubleshooting
 
-### Key Export Failed
+### Key export failed
 
-- Ensure target connection is valid and reachable.
-- Ensure authentication method for the connection is correctly configured.
-- Ensure remote user has write access to `~/.ssh/authorized_keys`.
+- Confirm target host/user/port are correct
+- Confirm connection auth config is valid
+- Confirm remote user can write to `~/.ssh/authorized_keys`
+
+### Key auth fails on login
+
+- Confirm selected key matches remote `authorized_keys`
+- Confirm key passphrase is correct
+- Confirm server allows public key authentication

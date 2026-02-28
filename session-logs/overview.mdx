@@ -1,27 +1,34 @@
 ---
 title: Session Logs
-description: Capture and review terminal session logs
+description: Capture terminal output for debugging, audits, and handoffs.
 ---
 
-Session logging helps with audits, debugging, and post-incident review.
+Session logging lets you keep a record of terminal activity when needed.
 
 ## Capabilities
 
-- Start/stop terminal logging
-- View saved logs in the app
-- Open logs in dedicated log tabs
-- Delete old logs
+- Start and stop logging per terminal session
+- View saved logs inside FreeSH
+- Open logs in dedicated tabs
+- Delete logs you no longer need
 
-## Recommended Workflow
+## Suggested Workflow
 
-1. Start logging before sensitive operations
-2. Perform terminal tasks
-3. Stop logging when done
-4. Review logs for validation and sharing
+1. Start logging before a critical operation
+2. Run commands in terminal
+3. Stop logging after completion
+4. Review saved logs for verification or sharing
+
+## Use Cases
+
+- Incident response timelines
+- Deployment change verification
+- Team handoff notes
 
 ## Troubleshooting
 
-### Log File Missing or Empty
+### Log is empty or missing expected output
 
-- Ensure logging was started before command execution.
-- Confirm session remained active during logging window.
+- Confirm logging was enabled before command execution
+- Confirm session stayed active during capture window
+- Confirm you are reviewing the correct session log

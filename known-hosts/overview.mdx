@@ -1,32 +1,38 @@
 ---
 title: Known Hosts Management
-description: Verify and manage trusted server host keys
+description: Verify and manage trusted host keys for SSH connections.
 ---
 
-Known hosts protect you against man-in-the-middle attacks by validating server identity.
+Known Hosts protects against man-in-the-middle attacks by tracking trusted host fingerprints.
 
 ## How It Works
 
-- First connection prompts for host key trust
-- Accepted fingerprints are stored locally
-- Future mismatches are flagged for security review
+- First connection to a host prompts for trust
+- Accepted host fingerprints are stored locally
+- Future key mismatches are flagged and require review
 
-## Managing Known Hosts
+## Manage Entries
 
-From the Known Hosts section, you can:
+From **Known Hosts**, you can:
+- review stored fingerprints
+- remove outdated entries
+- import entries from your SSH environment
 
-- Review stored host fingerprints
-- Remove outdated or invalid host entries
-- Import hosts from your SSH environment
+## When to Remove a Host Key
 
-## When to Remove an Entry
+Remove an entry only when you have verified one of these:
+- host was rebuilt
+- host keys were rotated intentionally
+- infrastructure was migrated and fingerprint changed as expected
 
-Remove a host key only when:
+## Security Guidance
 
-- Server was rebuilt/reprovisioned
-- Host key rotation was expected
-- You confirmed infrastructure change is legitimate
+Do not accept changed fingerprints blindly. Verify via a trusted channel first.
 
-## Security Note
+## Troubleshooting
 
-Do not blindly trust changed host keys. Validate fingerprints through a trusted channel.
+### Host key mismatch appears unexpectedly
+
+- Treat it as suspicious until verified
+- Confirm with server owner/admin out-of-band
+- Remove old key only after confirmation, then reconnect

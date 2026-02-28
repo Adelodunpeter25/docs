@@ -1,32 +1,40 @@
 ---
 title: Port Forwarding
-description: Create and manage SSH tunnels
+description: Create SSH tunnels for local, remote, and dynamic forwarding.
 ---
 
-FreeSH supports standard SSH tunneling modes for secure network access.
+Use port forwarding to route traffic securely through SSH.
 
 ## Supported Modes
 
-- Local forwarding
-- Remote forwarding
-- Dynamic forwarding (SOCKS)
+- **Local forwarding**: local port -> remote host:port
+- **Remote forwarding**: remote port -> local host:port
+- **Dynamic forwarding**: SOCKS proxy via SSH
 
-## Typical Use Cases
+## Common Use Cases
 
-- Access internal services through SSH
-- Expose local services to a remote network
-- Route browser/tools traffic through SOCKS proxy
+- Access internal services from your machine
+- Expose local development service to remote network
+- Route browser/tool traffic through SOCKS
 
-## Managing Tunnels
+## Manage Tunnels
 
-You can create tunnel configs, start/stop them, and monitor active status.
-
-If configured, some tunnels can auto-start after session connection.
+You can:
+- create tunnel configurations
+- start and stop active tunnels
+- monitor status from the app
+- auto-start selected tunnels after connection
 
 ## Troubleshooting
 
-### Tunnel Fails to Start
+### Tunnel fails to start
 
-- Check local/remote bind ports are free.
-- Verify remote SSH account allows forwarding.
-- Confirm destination host/port is reachable from the SSH server.
+- Confirm bind port is free
+- Confirm SSH account allows forwarding
+- Confirm destination host/port is reachable from SSH server
+
+### Tunnel starts but traffic fails
+
+- Confirm you are targeting the forwarded port (not destination directly)
+- Confirm destination service is up
+- Recheck local firewall rules for bound port
